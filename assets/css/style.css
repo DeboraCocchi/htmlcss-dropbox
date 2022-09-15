@@ -22,6 +22,10 @@ a{
   color:black;
 }
 
+.flex-style{
+  display: flex;
+}
+
 .std-btn{
   background-color: rgb(57,97,251);
   color:white;
@@ -47,13 +51,12 @@ a{
 
 }
 
-
+/* header */
 
 header{
   background-color: white;
   height:100px;
   padding: 10px 30px;
-  display: flex;
   align-items: center;
   justify-content: space-between;
 }
@@ -72,7 +75,6 @@ header .logo{
 }
 
 .jumbo-columns{
-  display: flex;
   align-items: flex-start;
 }
 
@@ -83,17 +85,15 @@ header .logo{
 
 .right-jumbo-col img{
   max-width:100%;
-
 }
 
-/* business plans */
+/* Business plans */
 
 .subscribe-plans, .top-user-type {
   border:1px solid rgb(227,227,229);
 }
 
 .subscribe-plans{
-  display: flex;
   justify-content: space-between;
 }
 
@@ -143,4 +143,91 @@ header .logo{
   content: '\f00c''\00a0 ';
   font-weight: 600;
   color:blue;
+}
+
+
+/* parteners */
+.partners{
+  padding-top:50px;
+}
+
+.partners .partners-img{
+  width:60%;
+}
+
+.partners .partners-text{
+  width:40%;
+}
+
+.partners .partners-img img{
+  max-width:100%;
+}
+
+.border-btn{
+  border:1px solid black;
+  padding:15px 20px;
+}
+
+/* Dropbox Business */
+.multi-block-container{
+  flex-wrap: wrap;
+}
+.dropbox-business .pro-card{
+  width:calc(99% / 3);
+  min-width:200px;
+}
+
+.dropbox-business .pro-card img{
+  width:100%;
+}
+
+
+/* squares */
+.square-col{
+  flex-direction: column;
+}
+.square{
+  width:100px;
+  height:100px;
+}
+
+.fifth-big{
+  width: 200px;
+  height:200px;
+}
+
+.first{
+  background-color: rgb(176,210,157);
+}
+.second{
+  background-color: rgb(84,146,203);
+}
+
+.third{
+  background-color: rgb(85,11,46);
+}
+
+.fourth{
+  background-color: rgb(217,33,34);
+}
+
+.fifth-big{
+  background-color: rgb(245,245,245);
+}
+
+.sixth{
+  background-color: rgb(182,1,36);
+}
+
+.seventh{
+
+  background-color: rgb(28,40,126);
+}
+
+.eighth{
+  background-color: rgb(187,207,230);
+}
+
+.ninth{
+  background-color: rgb(243,214,69);
 }
