@@ -15,7 +15,6 @@ nav{
 
 ul{
   list-style: none;
-  display: flex;
 }
 
 a{
@@ -32,11 +31,19 @@ a{
   color:white;
 }
 
-.container{
-  max-width:1350px;
-  width:80%;
+.large-container{
+  max-width:1200px;
+  width:70%;
   margin:0 auto;
   border: 2px solid red;
+
+}
+
+.narrow-container{
+  max-width:1200px;
+  width:50%;
+  margin:0 auto;
+  border: 2px solid green;
 
 }
 
@@ -60,6 +67,80 @@ header .logo{
 /* JUMBOTRON */
 
 .jumbotron{
-  background-color: rgb(187,207,230);
-  
+  background: linear-gradient(to bottom, rgb(187,207,230) 85%, white 15%);
+  height:80%; 
+}
+
+.jumbo-columns{
+  display: flex;
+  align-items: flex-start;
+}
+
+.left-jumbo-col{
+  width: 35%;
+  padding-top: 70px;
+}
+
+.right-jumbo-col img{
+  max-width:100%;
+
+}
+
+/* business plans */
+
+.subscribe-plans, .top-user-type {
+  border:1px solid rgb(227,227,229);
+}
+
+.subscribe-plans{
+  display: flex;
+  justify-content: space-between;
+}
+
+.plan-col{
+  width:calc(100% / 3);
+}
+
+.top-user-type{
+  text-align: center;
+}
+
+.bottom-plan-details .price::before{
+  content: '\20AC';
+}
+
+.bottom-plan-details .time-frame{
+  color:rgb(227,227,229);
+  margin-bottom:20px;
+}
+
+.bottom-plan-details .user-list-style::before{
+  font-family: "Font Awesome 5 Free";
+  content: '\f007' '\00a0 ';
+  font-weight: 600;
+}
+
+.bottom-plan-details .folder-list-style::before{
+  font-family: "Font Awesome 5 Free";
+  content: '\f07b''\00a0 ';
+  font-weight: 600;
+}
+
+.bottom-plan-details .share-list-style::before{
+  font-family: "Font Awesome 5 Free";
+  content: '\f1e0''\00a0 ';
+  font-weight: 600;
+}
+
+.bottom-plan-details .short-line{
+  width:40%;
+  height:1px;
+  border-top:1px solid rgb(227,227,229);
+}
+
+.bottom-plan-details .plan-milestones li::before{
+  font-family: "Font Awesome 5 Free";
+  content: '\f00c''\00a0 ';
+  font-weight: 600;
+  color:blue;
 }
