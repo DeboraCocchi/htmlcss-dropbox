@@ -27,17 +27,19 @@ a{
   color:white;
   padding:5px 8px;
   text-align:center;
-  display: inline-block;
+}
+
+.btn-std:hover{
+  background-color: rgb(89, 114, 211)
 }
 
 .btn-std a{
   color:white;
-  width: fit-content;
 }
 
 .large-container{
   max-width:1200px;
-  width:70%;
+  width:60%;
   margin:0 auto;
   border: 2px solid red;
 
@@ -47,8 +49,6 @@ a{
   max-width:1200px;
   width:50%;
   margin:0 auto;
-
-
 }
 
 /* header */
@@ -56,7 +56,7 @@ a{
 header{
   background-color: white;
   height:80px;
-  padding: 10px 30px;
+  padding: 0 20px;
   align-items: center;
   justify-content: space-between;
 }
@@ -64,39 +64,79 @@ header{
 header .logo{
   height:20px;
   vertical-align: middle;
+  margin-right:1rem;
+}
+
+header nav{
+  align-items: center;
+}
+
+header ul{
+  justify-content: space-between;
+  align-items: center;
 }
 
 header ul li{
   display:inline-block;
+  padding:0 1.3rem;
+}
+
+header ul li a{
+  font-size:0.9rem;
+  font-weight: 200;
+  display: inline-block;
+  padding:30px 0;
+}
+
+header ul li a:not(.btn-std):hover{
+  border-bottom:2px solid black;
 }
 
 
 /* JUMBOTRON */
 
 .jumbotron{
-  background: linear-gradient(to bottom, rgb(187,207,230) 85%, white 15%);
-  height:80%; 
+  background: linear-gradient(to bottom, rgb(187,207,230) 80%, white 20%);
+  height:75%; 
+}
+
+.jumbotron h1{
+  font-size:3rem;
+  font-weight: 900;
 }
 
 .jumbo-columns{
   align-items: flex-start;
   justify-content: space-between;
+  padding-top:2.2rem;
+  flex-wrap: wrap;
 }
 
 .left-jumbo-col{
-  width:38%;
-  padding-top: 70px;
+  width:30%;
   flex-direction: column;
-  margin-right:1%;
+  justify-content: space-between;
+}
 
+.left-jumbo-col *{
+  margin-bottom:2.5rem;
+}
+
+
+.left-jumbo-col .jumbo-text{
+  font-weight:200;
 }
 
 .left-jumbo-col .btn-std{
   display: inline;
 }
 
+.left-jumbo-col .down-arrow{
+  font-size:2.2rem;
+}
+
 .right-jumbo-col{
-  width: 60%;
+  width: 69%;
   text-align: right;
 }
 
@@ -105,6 +145,28 @@ header ul li{
 }
 
 /* Business plans */
+
+.business-solutions{
+  margin-top:3.2rem;
+}
+
+.business-solutions h2{
+  font-size:2.2rem;
+  margin-bottom:2rem;
+}
+
+.business-solutions .radio-plan{
+  margin-bottom: 1.5rem;
+}
+
+.business-solutions .radio-plan i.fa-solid{
+  color:blue;
+}
+
+.business-solutions .radio-plan i.fa-regular{
+  color:grey;
+  margin-left:20px;
+}
 
 .subscribe-plans, .top-user-type {
   border:1px solid rgb(227,227,229);
@@ -291,4 +353,42 @@ header ul li{
 .faq .narrow-container .faq-box:last-child{
   border-bottom:1px solid rgb(152,152,152);
 }
-  
+
+
+/* footer */
+
+footer{
+  background-color: black;
+  color: white;
+}
+
+footer .flex-style{
+  justify-content: space-between;
+}
+
+footer a{
+  color:white;
+  font-size:0.8rem;
+  margin-top:1.2rem;
+}
+
+footer .lang-choose{
+  width:fit-content;
+  border-top:1px solid white;
+  padding:30px 5px;
+  text-align: left;
+}
+
+footer .lang-choose a::before{
+  font-family: "Font Awesome 5 Free";
+  content: '\f57d''\00a0 ';
+  font-weight: 600;
+  color:white;
+}
+
+footer .lang-choose a.language::after{
+  font-family: "Font Awesome 5 Free";
+  content: '\00a0 ''\f078';
+  font-weight: 600;
+  color:white;
+}
