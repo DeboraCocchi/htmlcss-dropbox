@@ -5,8 +5,9 @@
 }
 
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-align: left;
+  background-color: white;
 }
 
 ul{
@@ -23,9 +24,9 @@ a{
 }
 
 .btn-std{
-  background-color: rgb(57,97,251);
+  background-color: rgb(55,98,251);
   color:white;
-  padding:5px 8px;
+  padding:6px 10px;
   text-align:center;
 }
 
@@ -39,16 +40,18 @@ a{
 
 .large-container{
   max-width:1200px;
-  width:60%;
+  width:65%;
   margin:0 auto;
-  border: 2px solid red;
-
 }
 
 .narrow-container{
   max-width:1200px;
   width:50%;
   margin:0 auto;
+}
+
+.debug{
+  background-color: pink;
 }
 
 /* header */
@@ -96,8 +99,9 @@ header ul li a:not(.btn-std):hover{
 /* JUMBOTRON */
 
 .jumbotron{
-  background: linear-gradient(to bottom, rgb(187,207,230) 80%, white 20%);
-  height:75%; 
+  background: linear-gradient(to bottom, rgb(187,207,230) 90%, white 20%);
+  height:10%;
+  padding-top:2rem;
 }
 
 .jumbotron h1{
@@ -119,9 +123,8 @@ header ul li a:not(.btn-std):hover{
 }
 
 .left-jumbo-col *{
-  margin-bottom:2.5rem;
+  margin-bottom:2.2rem;
 }
-
 
 .left-jumbo-col .jumbo-text{
   font-weight:200;
@@ -136,7 +139,7 @@ header ul li a:not(.btn-std):hover{
 }
 
 .right-jumbo-col{
-  width: 69%;
+  width: 68%;
   text-align: right;
 }
 
@@ -164,12 +167,12 @@ header ul li a:not(.btn-std):hover{
 }
 
 .business-solutions .radio-plan i.fa-regular{
-  color:grey;
+  color:rgb(207,207,210);
   margin-left:20px;
 }
 
-.subscribe-plans, .top-user-type {
-  border:1px solid rgb(227,227,229);
+.top-user-type {
+  border-bottom:1px solid rgb(207,207,210);
 }
 
 .subscribe-plans{
@@ -178,10 +181,42 @@ header ul li a:not(.btn-std):hover{
 
 .plan-col{
   width:calc(100% / 3);
+  padding: 0 1rem;
+}
+
+.plan-card{
+  border:1px solid rgb(207,207,210);
 }
 
 .top-user-type{
   text-align: center;
+  padding:0.5rem 1rem;
+  font-size:0.8rem;
+}
+
+.bottom-plan-details{
+  padding: 0 1.2rem;
+}
+
+.bottom-plan-details h3{
+  margin:1.5rem 0;
+}
+.bottom-plan-details h4,.bottom-plan-details ul, .bottom-plan-details .btn-std, .bottom-plan-details>p, .bottom-plan-details .time-frame, .bottom-plan-details .buy-now {
+  margin-bottom:1.5rem;
+  font-size:90%;
+  font-weight:200;
+}
+
+.bottom-plan-details ul li{
+  margin:0.5rem 0;
+}
+
+.bottom-plan-details .short-line{
+  margin:1.5rem 0;
+}
+
+.bottom-plan-details .btn-std{
+  display:block;
 }
 
 .bottom-plan-details .price::before{
@@ -189,13 +224,20 @@ header ul li a:not(.btn-std):hover{
 }
 
 .bottom-plan-details .time-frame{
-  color:rgb(227,227,229);
+  font-weight:100;
+  font-size:0.9rem;
   margin-bottom:20px;
 }
 
 .bottom-plan-details .user-list-style::before{
   font-family: "Font Awesome 5 Free";
   content: '\f007' '\00a0 ';
+  font-weight: 600;
+}
+
+.bottom-plan-details .multi-user-list-style::before{
+  font-family: "Font Awesome 5 Free";
+  content: '\f0c0' '\00a0 ';
   font-weight: 600;
 }
 
@@ -214,7 +256,7 @@ header ul li a:not(.btn-std):hover{
 .bottom-plan-details .short-line{
   width:40%;
   height:1px;
-  border-top:1px solid rgb(227,227,229);
+  border-top:1px solid rgb(207,207,210);
 }
 
 .bottom-plan-details .plan-milestones li::before{
@@ -222,6 +264,11 @@ header ul li a:not(.btn-std):hover{
   content: '\f00c''\00a0 ';
   font-weight: 600;
   color:blue;
+}
+
+.team-sub-plan{
+  margin-top:1rem;
+  padding:0 1rem;
 }
 
 
