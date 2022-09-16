@@ -9,10 +9,6 @@ body{
   text-align: left;
 }
 
-nav{
-  display: inline-block;
-}
-
 ul{
   list-style: none;
 }
@@ -26,13 +22,17 @@ a{
   display: flex;
 }
 
-.std-btn{
+.btn-std{
   background-color: rgb(57,97,251);
   color:white;
+  padding:5px 8px;
+  text-align:center;
+  display: inline-block;
 }
 
-.std-btn a{
+.btn-std a{
   color:white;
+  width: fit-content;
 }
 
 .large-container{
@@ -47,7 +47,7 @@ a{
   max-width:1200px;
   width:50%;
   margin:0 auto;
-  border: 2px solid green;
+
 
 }
 
@@ -55,7 +55,7 @@ a{
 
 header{
   background-color: white;
-  height:100px;
+  height:80px;
   padding: 10px 30px;
   align-items: center;
   justify-content: space-between;
@@ -64,6 +64,10 @@ header{
 header .logo{
   height:20px;
   vertical-align: middle;
+}
+
+header ul li{
+  display:inline-block;
 }
 
 
@@ -76,11 +80,24 @@ header .logo{
 
 .jumbo-columns{
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .left-jumbo-col{
-  width: 35%;
+  width:38%;
   padding-top: 70px;
+  flex-direction: column;
+  margin-right:1%;
+
+}
+
+.left-jumbo-col .btn-std{
+  display: inline;
+}
+
+.right-jumbo-col{
+  width: 60%;
+  text-align: right;
 }
 
 .right-jumbo-col img{
@@ -163,9 +180,10 @@ header .logo{
   max-width:100%;
 }
 
-.border-btn{
-  border:1px solid black;
-  padding:15px 20px;
+.btn-border{
+  border:none;
+  padding:8px 10px;
+  background-color: white;
 }
 
 /* Dropbox Business */
@@ -183,17 +201,30 @@ header .logo{
 
 
 /* squares */
-.square-col{
-  flex-direction: column;
-}
-.square{
-  width:100px;
-  height:100px;
+
+.squares{
+  width:100%;
+  text-align:center;
+  margin:0 auto;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.fifth-big{
-  width: 200px;
-  height:200px;
+.square-col{
+  flex-direction: column;
+  width:calc(100% / 6);
+  height: calc(100vw / 3);
+}
+
+#fifth-big-square{
+  width:calc(100% / 3);
+  height: calc(100vw / 3);
+  background-color: rgb(245,245,245);
+}
+
+.square{
+  width:100%;
+  height:50%;
 }
 
 .first{
@@ -209,10 +240,6 @@ header .logo{
 
 .fourth{
   background-color: rgb(217,33,34);
-}
-
-.fifth-big{
-  background-color: rgb(245,245,245);
 }
 
 .sixth{
@@ -231,3 +258,37 @@ header .logo{
 .ninth{
   background-color: rgb(243,214,69);
 }
+
+/* free-trial */
+
+.free-trial{
+  background-color: rgb(187,207,230);
+}
+
+.free-trial .narrow-container{
+  justify-content: space-between;
+  align-items: center;
+  padding:6vw 0;
+}
+
+.free-trial .narrow-container>h2{
+  color:rgb(82,1,29);
+  max-width:40%;
+  font-size:1.2rem;
+}
+
+/* F.A.Q. */
+
+.faq {
+  background-color: white;
+}
+
+.faq .narrow-container .faq-box{
+  padding:2rem;
+  border-top:1px solid rgb(152,152,152);
+}
+
+.faq .narrow-container .faq-box:last-child{
+  border-bottom:1px solid rgb(152,152,152);
+}
+  
