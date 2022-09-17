@@ -6,7 +6,7 @@
 
 body{
   font-family: 'Open Sans', sans-serif;
-  text-align: left;
+  text-align: center;
   background-color: white;
 }
 
@@ -14,9 +14,8 @@ ul{
   list-style: none;
 }
 
-a{
+a:not(.shop){
   text-decoration: none;
-  color:black;
 }
 
 .flex-style{
@@ -26,28 +25,33 @@ a{
 .btn-std{
   background-color: rgb(55,98,251);
   color:white;
-  padding:6px 10px;
+  padding:10px 10px;
   text-align:center;
+  display: inline-block;
 }
 
 .btn-std:hover{
-  background-color: rgb(89, 114, 211)
+  opacity: 0.8;
 }
 
 .btn-std a{
   color:white;
+  text-decoration: none;
 }
 
 .large-container{
   max-width:1200px;
-  width:65%;
+  width:70%;
   margin:0 auto;
+  text-align: left;
+  
 }
 
 .narrow-container{
   max-width:1200px;
-  width:50%;
+  width:60%;
   margin:0 auto;
+  text-align: left;
 }
 
 .debug{
@@ -58,16 +62,25 @@ a{
 
 header{
   background-color: white;
+  width: 100%;
   height:80px;
   padding: 0 20px;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  z-index: 999;
+  border-bottom: 0.2px solid rgba(234, 238, 244, 0.902);
 }
 
 header .logo{
   height:20px;
   vertical-align: middle;
   margin-right:1rem;
+}
+
+header .logo:hover{
+  height:20px;
+  transform:scale(105%);
 }
 
 header nav{
@@ -89,23 +102,24 @@ header ul li a{
   font-weight: 200;
   display: inline-block;
   padding:30px 0;
+  color: black;
 }
 
 header ul li a:not(.btn-std):hover{
-  border-bottom:2px solid black;
+  border-bottom:2px solid;
 }
 
 
-/* JUMBOTRON */
+/* Jumbotron */
 
 .jumbotron{
   background: linear-gradient(to bottom, rgb(187,207,230) 90%, white 20%);
   height:10%;
-  padding-top:2rem;
+  padding-top:calc(2rem + 80px);
 }
 
 .jumbotron h1{
-  font-size:3rem;
+  font-size:4.2rem;
   font-weight: 900;
 }
 
@@ -120,22 +134,25 @@ header ul li a:not(.btn-std):hover{
   width:30%;
   flex-direction: column;
   justify-content: space-between;
+  min-width:150px;
 }
 
 .left-jumbo-col *{
-  margin-bottom:2.2rem;
+  margin-bottom:2.5rem;
 }
 
 .left-jumbo-col .jumbo-text{
   font-weight:200;
+  font-size:1.1rem;
 }
 
 .left-jumbo-col .btn-std{
   display: inline;
 }
 
-.left-jumbo-col .down-arrow{
+.left-jumbo-col i.fa-solid.fa-arrow-down{
   font-size:2.2rem;
+  text-shadow: 5px 2px #dddddd0b;
 }
 
 .right-jumbo-col{
@@ -145,6 +162,8 @@ header ul li a:not(.btn-std):hover{
 
 .right-jumbo-col img{
   max-width:100%;
+  min-width: 400px;
+  z-index:1;
 }
 
 /* Business plans */
@@ -153,8 +172,8 @@ header ul li a:not(.btn-std):hover{
   margin-top:3.2rem;
 }
 
-.business-solutions h2{
-  font-size:2.2rem;
+.business-solutions h2, .dropbox-business h2, .faq .narrow-container h2{
+  font-size:2.5rem;
   margin-bottom:2rem;
 }
 
@@ -177,15 +196,17 @@ header ul li a:not(.btn-std):hover{
 
 .subscribe-plans{
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .plan-col{
-  width:calc(100% / 3);
-  padding: 0 1rem;
+  width:calc(93% / 3);
+  min-width:100px;
 }
 
 .plan-card{
   border:1px solid rgb(207,207,210);
+  min-width:100px;
 }
 
 .top-user-type{
@@ -199,24 +220,36 @@ header ul li a:not(.btn-std):hover{
 }
 
 .bottom-plan-details h3{
+  font-weight: 600;
+  font-size:130%;
+}
+
+.bottom-plan-details *{
   margin:1.5rem 0;
 }
-.bottom-plan-details h4,.bottom-plan-details ul, .bottom-plan-details .btn-std, .bottom-plan-details>p, .bottom-plan-details .time-frame, .bottom-plan-details .buy-now {
+
+.bottom-plan-details h4,.bottom-plan-details ul, .bottom-plan-details>p, .bottom-plan-details .time-frame{
   margin-bottom:1.5rem;
   font-size:90%;
   font-weight:200;
+}
+.bottom-plan-details ul{
+  position:relative;
+  margin-left:0;
+  padding-left:1.2rem;
+
 }
 
 .bottom-plan-details ul li{
   margin:0.5rem 0;
 }
 
-.bottom-plan-details .short-line{
-  margin:1.5rem 0;
-}
-
 .bottom-plan-details .btn-std{
   display:block;
+}
+
+.bottom-plan-details a.shop{
+  text-decoration: initial;
 }
 
 .bottom-plan-details .price::before{
@@ -233,30 +266,42 @@ header ul li a:not(.btn-std):hover{
   font-family: "Font Awesome 5 Free";
   content: '\f007' '\00a0 ';
   font-weight: 600;
+  position:absolute;
+  left:0;
 }
 
 .bottom-plan-details .multi-user-list-style::before{
   font-family: "Font Awesome 5 Free";
   content: '\f0c0' '\00a0 ';
   font-weight: 600;
+  position:absolute;
+  left:0;
 }
 
 .bottom-plan-details .folder-list-style::before{
   font-family: "Font Awesome 5 Free";
   content: '\f07b''\00a0 ';
   font-weight: 600;
+  position:absolute;
+  left:0;
 }
 
 .bottom-plan-details .share-list-style::before{
   font-family: "Font Awesome 5 Free";
   content: '\f1e0''\00a0 ';
   font-weight: 600;
+  position:absolute;
+  left:0;
 }
 
 .bottom-plan-details .short-line{
-  width:40%;
-  height:1px;
   border-top:1px solid rgb(207,207,210);
+}
+
+.bottom-plan-details .short-line, .about-partners .short-line{
+  width:40%;
+  height:2px;
+  margin:1.5rem 0;
 }
 
 .bottom-plan-details .plan-milestones li::before{
@@ -264,25 +309,44 @@ header ul li a:not(.btn-std):hover{
   content: '\f00c''\00a0 ';
   font-weight: 600;
   color:blue;
+  position:absolute;
+  left:0;
 }
 
 .team-sub-plan{
   margin-top:1rem;
-  padding:0 1rem;
+ 
+  width: 100%;
+}
+
+.team-sub-plan .bottom-plan-details{
+  font-weight: 200;
 }
 
 
-/* parteners */
+/* PARTNERS */
+
+
 .partners{
-  padding-top:50px;
+  padding:6rem 0;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .partners .partners-img{
-  width:60%;
+  width:65%;
 }
 
 .partners .partners-text{
-  width:40%;
+  width:30%;
+}
+
+.partners .partners-text h3{
+  font-size: 1.5rem;
+}
+
+.partners .partners-text *{
+  margin-bottom: 1.5rem;
 }
 
 .partners .partners-img img{
@@ -290,26 +354,45 @@ header ul li a:not(.btn-std):hover{
 }
 
 .btn-border{
-  border:none;
+  border:1px solid black;
   padding:8px 10px;
   background-color: white;
+  display: inline-block;
 }
 
-/* Dropbox Business */
+/* DROPBOX BUSINESS */ 
+
 .multi-block-container{
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .dropbox-business .pro-card{
-  width:calc(99% / 3);
+  width:calc(93% / 3);
   min-width:200px;
+  padding:20px 0;
+}
+
+.dropbox-business .pro-card *{
+  margin-bottom:1.5rem;
 }
 
 .dropbox-business .pro-card img{
   width:100%;
 }
 
+.dropbox-business .know-more{
+  margin: 8rem 0 5rem;
+  max-width:70%;
+}
 
-/* squares */
+.dropbox-business .know-more a{
+  margin:3rem 0;
+  display: inline-block;
+}
+
+
+
+/* SQUARES */
 
 .squares{
   width:100%;
@@ -325,22 +408,83 @@ header ul li a:not(.btn-std):hover{
   height: calc(100vw / 3);
 }
 
+
+.square{
+  width:100%;
+  height:50%;
+  padding:15px;
+  align-items: center;
+  justify-content: center;
+  color:white;
+}
+
+.square svg{
+  fill:white;
+  width:75%;
+}
+
+.square:active{
+  border:25px solid rgba(255, 255, 255, 0.42);
+}
+/* per ogni square creare visualizzazione impostata di default su none eccetto la prima; */
+
 #fifth-big-square{
   width:calc(100% / 3);
   height: calc(100vw / 3);
   background-color: rgb(245,245,245);
 }
 
-.square{
-  width:100%;
-  height:50%;
+.about-partners{
+  padding:10%;
+  text-align:left;
+  color:black; 
+  max-height:90%;
+}
+
+.about-partners *{
+  margin-bottom:1.5rem;
+}
+
+.about-partners img{
+  width:50%;
+}
+
+#fifth-big-square .about-partners .wrapper{
+  font-weight:300;
+  height:11rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size:1rem;
+  
+}
+
+.about-partners span{
+  font-size:110%;
+}
+
+.about-partners .short-line{
+  border-top:1px solid darkgrey;
+  margin-bottom:2.5rem;
+}
+
+.about-partners.hidden{
+  display:none;
 }
 
 .first{
   background-color: rgb(176,210,157);
 }
+
 .second{
   background-color: rgb(84,146,203);
+}
+
+.square.second:active .florida-uni{
+  display: block;
+}
+
+.square.second:active .design-it{
+  display: none;
 }
 
 .third{
@@ -368,37 +512,63 @@ header ul li a:not(.btn-std):hover{
   background-color: rgb(243,214,69);
 }
 
-/* free-trial */
+
+
+/* FREE-TRIAL */
 
 .free-trial{
   background-color: rgb(187,207,230);
+
 }
 
 .free-trial .narrow-container{
   justify-content: space-between;
   align-items: center;
-  padding:6vw 0;
+  height: calc(100vw / 6);
 }
 
 .free-trial .narrow-container>h2{
   color:rgb(82,1,29);
-  max-width:40%;
-  font-size:1.2rem;
+  max-width:60%;
+  font-size:2.5rem;
 }
 
 /* F.A.Q. */
 
 .faq {
   background-color: white;
+  padding:5rem 0;
 }
 
 .faq .narrow-container .faq-box{
-  padding:2rem;
+  padding:2.2rem 1rem 2.2rem 0;
   border-top:1px solid rgb(152,152,152);
 }
 
 .faq .narrow-container .faq-box:last-child{
   border-bottom:1px solid rgb(152,152,152);
+}
+
+.faq-box summary{
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.faq-box summary::after{
+  font-family: "Font Awesome 5 Free";
+  content: '\00a0 ''\f078';
+  font-weight: 600;
+}
+
+.faq-box details[open] summary::after{
+  font-family: "Font Awesome 5 Free";
+  content: '\00a0 ''\f077';
+  font-weight: 600;
+}
+
+.faq-box p{
+  margin-top:1.5rem;
+  font-weight:300;
 }
 
 
@@ -407,16 +577,26 @@ header ul li a:not(.btn-std):hover{
 footer{
   background-color: black;
   color: white;
+  align-items: center;
 }
 
-footer .flex-style{
+footer .footer-nav-conatiner{
   justify-content: space-between;
+  align-items: flex-start;
+  padding:4rem 0;
+}
+
+footer .footer-col h4{
+  font-size:1.4rem;
+}
+
+footer .footer-col *{
+  margin-bottom:1rem;
 }
 
 footer a{
   color:white;
-  font-size:0.8rem;
-  margin-top:1.2rem;
+  font-size:0.9rem;
 }
 
 footer .lang-choose{
