@@ -461,7 +461,7 @@ header ul li a:not(.btn-std):hover{
   max-width:70%;
 }
 
-.square:active{
+.square:active, .square.active{
   border:20px solid rgba(255, 255, 255, 0.42);
 }
 
@@ -594,16 +594,17 @@ header ul li a:not(.btn-std):hover{
   font-weight: 600;
 }
 
-.faq-box summary::after{
-  font-family: "Font Awesome 5 Free";
-  content: '\00a0 ''\f078';
+.faq-box summary::after, .faq-box details[open] summary::after{
+  font-family: "Font Awesome 6 Free";
   font-weight: 600;
 }
 
+.faq-box summary::after{
+  content: '\00a0 ''\f078';
+}
+
 .faq-box details[open] summary::after{
-  font-family: "Font Awesome 5 Free";
   content: '\00a0 ''\f077';
-  font-weight: 600;
 }
 
 .faq-box p{
